@@ -44,4 +44,24 @@ describe('XML 2 JSON parser', () => {
       expect(error.message).to.equal(messageText);
     });
   });
+
+  describe('splitResult', async () => {
+    it('should emit each item if splitResult=true');
+
+    it('should emit an array if splitResult=false');
+
+    it('should ignore splitResult=true if item is not an array');
+  });
+
+  describe('customJsonata', async () => {
+    it('should apply custom JSONata expression if customJsonata=true');
+
+    it('should ignore custom JSONata expression if customJsonata=false');
+  });
+
+  describe('childArray', async () => {
+    it('should turn each child element into an array if childArray=true');
+
+    it('should not turn single elements into array if childArray=false');
+  });
 });
